@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/webcam.min.js"></script>
+    <script type="text/javascript" src="js/camera.custom.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/image.js"></script>
+    <script type="text/javascript" src="js/select2.full.min.js"></script>
+    <script type="text/javascript" src="js/select2.min.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+</head>
+
+<body>
+    <div id="page_body">
+        <div class="container">
+            <div class="col-md-4">
+                <div id="info_tab" class="tab">
+                    <h3>Add Personal Information</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="add_rec_tab" class="tab">
+                    <h3>Add Document</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="view_rec_tab" class="tab">
+                    <h3> View Records</h3>
+                </div>
+            </div>
+        </div>
+        <!-- //////////////////////////////////////////////////
+    //////////////Add New Record//////////////////////
+    ////////////////////////////////////////////////// -->
+        </br>
+        </br>
+        </br>
+        <div id="container1" class="container" style="display:none;">
+            <div class="pull-right col-md-4">
+                <select id="listdrop" name="list" data-placeholder="Choose a document...">
+                                        <option value=""></option>
+					</select>
+            </div>
+            <div class="col-md-4">
+                <div id="my_camera"></div>
+            </div>
+            <div id="form" class="col-md-4">
+                <center>
+                    <img id="get_photo" src="images/img.jpg" width="150px" style="cursor:pointer">
+                    <canvas id="canvas" width="240px;" height="240px;" style="display:none;">
+            </canvas>
+                </center>
+                <div id="new_doc">
+                    <div class="group">
+                        <input type="text" name="name" required />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="custom">Name</label>
+                    </div>
+                    <div class="group">
+                        <input type="text" name="age" required />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="custom">Age</label>
+                    </div>
+                    <div class="group">
+                        <input type="text" name="address" required />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="custom">Address</label>
+                    </div>
+                    <div class="sub_home">
+                        <div class="sub_home_left">
+                            <input id="form-submit" style="width:75%" type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
+                        </div>
+                    </div>
+                    <p id="container1_alert"></p>
+                </div>
+            </div>
+        </div>
+        <!-- ////////////////////////////////////////////
+    ////////Display Document///////////////////
+    /////////////////////////////////////////// -->
+        <div id="container2" class="container" style="display:none;">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6">
+                <div id="new_record">
+                    <div class="group">
+                        <input type="text" name="docname" required />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label class="custom">document name</label>
+                    </div>
+                    <div class="sub_home">
+                        <div class="sub_home_left">
+                            <input id="doc-submit" type="submit" value="submit" name="register" class="btn btn-block btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ////////////////////////////////////////////
+    ////////view drop down list///////////////////
+    /////////////////////////////////////////// -->
+        <div id="container3" class="container" style="display:none;">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <select id="viewdrop" name="view" data-placeholder="Choose a document...">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="container">
+                <div id="listid" class="container-fluid">
+                    <div id="single_element" class="row content single_element" style="display:none;">
+                        <div class="col-md-3">
+                            <img id="get_photo" src="images/img.jpg" width="150px">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="col-md-9">
+                                <h4>Name : <span id="listname"></span></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <h4>Age: <span id="listage"></span></h4>
+                            </div>
+                            <div class="col-md-12">
+                                <h4> Address: <span id="listaddress"></span></h4>
+                            </div>
+                        </div>
+                        <div class="pull-right col-md-4 elements">
+                            <span id="signature" class="field" for="signature">Signature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

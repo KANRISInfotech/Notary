@@ -1,0 +1,429 @@
+/* ===================================
+	blackor - One Page Responsive Template
+====================================== */
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: #555;
+    background: #fff;
+    font-style: oblique;
+}
+
+ ::selection {
+    color: #555;
+    background: #fff;
+    font-style: oblique;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #2a2b29;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track:window-inactive {
+    opacity: 0;
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    opaciy: 0.8;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: blue;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    opacity: 0;
+    background: rgba(50, 50, 50, 0.1);
+}
+
+input[type="button"],
+input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px 10px 4px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    background: transparent !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+}
+
+
+/* LABEL ======================================= */
+
+label {
+    color: #666;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    text-transform: capitalize;
+}
+
+
+/* active state */
+
+input[type="text"]:focus~label,
+input[type="text"]:valid~label,
+input[type="password"]:focus~label,
+input[type="password"]:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    left: 0px;
+    top: -10px;
+    font-size: 14px;
+    color: blue;
+}
+
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: blue;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 0%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+
+/* active state */
+
+input[type="text"]:focus~.bar:before,
+input[type="password"]:focus~.bar:before,
+textarea:focus~.bar:before {
+    width: 100%;
+}
+
+input[type="text"]:focus~.bar:after,
+input[type="password"]:focus~.bar:after,
+textarea:focus~.bar:after {
+    width: 00%;
+}
+
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* active state */
+
+input[type="text"]:focus~.highlight,
+input[type="password"]:focus~.highlight,
+textarea:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: blue;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: blue;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: blue;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.form-control {
+    background-color: #2f383d;
+    border-radius: 0;
+    padding: 5px 10px;
+    border: 0 none;
+    color: #ddd;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.form-control:focus {
+    /* box-shadow: 1px 1px 1px 1px rgba(169, 206, 72, 0.5); */
+    box-shadow: 0 3px 3px rgba(1, 163, 67, .24), 0 0 8px rgba(1, 163, 67, .12), 0 6px 18px rgba(43, 231, 133, .12);
+    border-color: #a9ce48;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+
+.form-control::-webkit-input-placeholder {
+    /*  Chrome, Safari, Opera  */
+    color: #999;
+    font-style: italic;
+}
+
+.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #999;
+    font-style: italic;
+}
+
+.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #999;
+    font-style: italic;
+}
+
+.form-control:-ms-input-placeholder {
+    /*  Internet Explorer  */
+    color: #999;
+    font-style: italic;
+}
+
+.form-control {
+    color: #666;
+    margin-top: 12px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 38px;
+}
+
+.form-control:hover {
+    border-color: #a9ce48;
+}
+
+select {
+    padding: 3px;
+    margin-top: 20px;
+    width: 100%;
+    background: rgba(196, 206, 72, 0);
+    color: #888;
+    border: none;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+select:hover {
+    padding: 3px;
+    margin-top: 20px;
+    width: 100%;
+    background: rgba(196, 206, 72, 0);
+    color: #888;
+    border: 1px solid rgba(196, 206, 72, 0.6);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(169, 206, 72, 0.5);
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+select:focus {
+    padding: 3px;
+    margin-top: 20px;
+    width: 100%;
+    background: rgba(196, 206, 72, 0);
+    color: #888;
+    border: 1px solid rgba(196, 206, 72, 0.6);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(169, 206, 72, 0.5);
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.tab {
+    border-bottom: 2px solid blue;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    height: 30px;
+}
+
+.tab h3 {
+    font-size: 20px;
+}
+
+.tab:hover {
+    -ms-transform: translate(0px, -1px);
+    /* IE 9 */
+    -webkit-transform: translate(0px, -1px);
+    /* Safari */
+    transform: translate(0px, -1px);
+    box-shadow: 0px 2px 1px 1px rgba(200, 200, 200, 0.8);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.tab_active {
+    cursor: cursor;
+    /* padding: 0em 0.2em 0em 0.2em;
+    display: inline-block;
+    background-color: #b3c6ff;
+    font-size: 25px;
+    line-height: 20px; */
+    border-bottom: 2px solid blue;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px 1px rgba(00, 00, 00, 0.2);
+}
+
+.tab_active h3 {
+    font-size: 24px;
+}
+
+h1.hidden {
+    visibility: hidden;
+}
+
+.elements {
+    /* padding: 2px;
+    margin-top: 150px;
+    border-bottom: ridge;
+    border-bottom-color: #1f6a9a;
+    padding-left: 0; */
+    border-top: 2px solid black;
+    padding-top: 5px;
+    text-align: right;
+    margin-top: 150px;
+    padding-bottom: 50px;
+}
+
+.field {
+    font-size: 20px;
+    color: #1f6a9a;
+}
+
+form {
+    padding: 3em;
+}
+
+.single_element h4 {
+    font-size: 18px;
+    color: #555;
+}
+
+.single_element h4 span {
+    font-size: 20px;
+    color: #222;
+    text-transform: capitalize;
+}
+
+.btn-primary {
+    border-radius: 5px;
+    border: 2px solid blue;
+    background-color: #eee;
+    color: blue;
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+}
+
+.btn-primary:hover {
+    border: 2px solid white;
+    background-color: blue;
+    color: #eee;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    transition: .3s ease;
+}

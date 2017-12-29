@@ -1,0 +1,17 @@
+RewriteEngine On 
+
+RewriteCond %{REQUEST_URI} add_record [NC]
+RewriteRule ^(\w+)$ ./index.html
+
+RewriteCond %{REQUEST_URI} add_document [NC]
+RewriteRule ^(\w+)$ ./index.html
+
+RewriteCond %{REQUEST_URI} view_document [NC]
+RewriteRule ^(\w+)$ ./index.html
+
+RewriteCond %{REQUEST_URI} not_found [NC]
+RewriteRule ^(\w+)$ ./index.html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^. http://localhost:8081/notary/not_found [L]
